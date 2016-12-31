@@ -1,0 +1,21 @@
+{
+  "name": "gamepad-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gamepad-component.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://archive.voodoowarez.com/gamepad-component"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@most/create": "^2.0.1",
+    "most": "^1.1.1",
+    "most-gamepad": "^1.0.2"
+  }
+}
