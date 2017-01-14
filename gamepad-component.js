@@ -1,5 +1,5 @@
 var
-  MostCreate= require( "@most/create"),
+  MostCreate= require( "most-cree8"),
   gamepad= require( "most-gamepad")({ multiplier: 1})
 
 class GamepadComponent extends HTMLElement {
@@ -8,11 +8,7 @@ class GamepadComponent extends HTMLElement {
 	}
 	constructor(){
 		super()
-		this._next= new Promise( resolve=> {
-			this.stream= MostCreate( next=> {
-				resolve( next)
-			}).switchLatest()
-		})
+		this.stream= MostCreate( next=> this._next= next).switchLatest()
 	}
 	connectedCallback(){
 		if( !this.getAttribute( "index")){
@@ -26,7 +22,7 @@ class GamepadComponent extends HTMLElement {
 	}
 	attributeChangedCallback( name, oldValue, newValue){
 		if( name=== "index"){
-			this._next.then( newValue)
+			this._next( newValue)
 		}
 	}
 }
