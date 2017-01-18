@@ -15,7 +15,7 @@
 	"license": "X11",
 	"dependencies": {
 		"most": "^1.1.1",
-		"most-cree8": "^2.0.1",
-		"most-gamepad": "^1.0.2"
+		"most-gamepad": "^1.0.2",
+		"observable-defer": "^1.2.0"
 	}
 }
